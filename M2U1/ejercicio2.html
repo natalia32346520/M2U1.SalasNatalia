@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de caracteres</title>
+</head>
+<head>
+<script>
+    function contarCaracteres() {
+      var textarea = document.getElementById("myTextarea");
+      var contador = document.getElementById("contador");
+      var maxCaracteres = 100; // Número máximo de caracteres permitidos
+      
+      var longitudActual = textarea.value.length;
+      var caracteresRestantes = maxCaracteres - longitudActual;
+      
+      contador.innerHTML = caracteresRestantes + " caracteres restantes";
+    }
+  </script>
+ </head> 
+<body>
+    <textarea id="myTextarea" rows="4" cols="50" oninput="contarCaracteres()"></textarea>
+    <p id="contador">100 caracteres restantes</p> 
+</body>
+</html>

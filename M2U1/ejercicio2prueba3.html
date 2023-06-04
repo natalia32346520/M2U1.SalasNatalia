@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JVAvanzadoprueba3</title>
+</head>
+<head>
+<title>Formulario con Contador de Caracteres</title>
+  <script>
+    function contarCaracteres() {
+      var textarea = document.getElementById("myTextarea");
+      var contador = document.getElementById("contador");
+      var maxCaracteres = 100; // Número máximo de caracteres permitidos
+      
+      var longitudActual = textarea.value.length;
+      var caracteresRestantes = maxCaracteres - longitudActual;
+      
+      contador.innerHTML = caracteresRestantes + " caracteres restantes";
+    }
+  </script>
+  </head>
+<body>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br>
+        
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required><br>
+        
+        <label for="myTextarea">Mensaje:</label>
+        <textarea id="myTextarea" rows="4" cols="50" oninput="contarCaracteres()"></textarea>
+        <p id="contador">100 caracteres restantes</p>
+        
+        <input type="submit" value="Enviar">
+      </form>
+</body>
+</html>

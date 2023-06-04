@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JVSAvanzado.Salas</title>
+
+</head>
+<title>Cambiar de color de fondo los cuadrados</title>
+<style>
+    .cuadrado {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      display: inline-block;
+      cursor: pointer;
+    }
+</style>
+<body>
+  <div id="cuadrado1" class="cuadrado"></div>
+  <div id="cuadrado2" class="cuadrado"></div>
+  <div id="cuadrado3" class="cuadrado"></div>
+
+  <script src="script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Obtener los elementos de los cuadrados por su id
+  var cuadrado1 = document.getElementById('cuadrado1');
+  var cuadrado2 = document.getElementById('cuadrado2');
+  var cuadrado3 = document.getElementById('cuadrado3');
+ // Asignar colores de fondo iniciales a los cuadrados
+  cuadrado1.style.backgroundColor = 'red';
+  cuadrado2.style.backgroundColor = 'green';
+  cuadrado3.style.backgroundColor = 'blue';
+
+  // Función para cambiar el color de fondo del documento
+  function cambiarColorFondo(color) {
+    document.body.style.backgroundColor = color;
+  }
+// Asignar eventos de clic a los cuadrados
+cuadrado1.addEventListener('click', function() {
+    cambiarColorFondo('red');
+  });
+
+  cuadrado2.addEventListener('click', function() {
+    cambiarColorFondo('green');
+  });
+
+  cuadrado3.addEventListener('click', function() {
+    cambiarColorFondo('blue');
+  });
+});
+</script>
+
+    
+</body>
+</html>
